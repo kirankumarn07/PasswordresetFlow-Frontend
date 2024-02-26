@@ -1,0 +1,10 @@
+.resWidth{
+    width: 100% !important;
+
+}
+
+@media (min-width: 576px) { 
+    .resWidth{
+        width: 25% !important;
+    }
+ }

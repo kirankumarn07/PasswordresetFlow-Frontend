@@ -10,7 +10,7 @@ function ResetPassword() {
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post(`${import.meta.env.VITE_API_URL}/reset-password/${id}/${token}`,{password})
+        axios.post(`http://localhost:3011/reset-password/${id}/${token}`,{password})
         .then(res=>{
             if(res.data.Status ==="Success"){
                 navigate('/login')
@@ -22,7 +22,7 @@ function ResetPassword() {
 
   return (
     <div className='d-flex justify-content-center align-items-center bg-decondary vh-100'>
-        <div className='bg-white p-3 rounded w-25'>
+        <div className='bg-white p-3 rounded resWidth'>
             <h4>Reset Password</h4>
             <form onSubmit={handleSubmit}>
                 <div className='mb-3'>

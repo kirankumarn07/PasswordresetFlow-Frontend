@@ -10,7 +10,7 @@ function Signup() {
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post(`${import.meta.env.VITE_API_URL}/register`,{name,email,password})
+        axios.post(`http://localhost:3011/register`,{name,email,password})
         .then(result=>{console.log(result);
                 navigate('/login')
         })
@@ -18,7 +18,7 @@ function Signup() {
     }
   return (
     <div className='d-flex justify-content-center align-items-center bg-decondary vh-100'>
-    <div className='bg-white p-3 rounded w-25'>
+    <div className='bg-white p-3 rounded resWidth'>
         <h2>Register</h2>
         <form onSubmit={handleSubmit}>
             <div className='mb-3'>

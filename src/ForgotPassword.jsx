@@ -9,7 +9,7 @@ function ForgotPassword() {
     axios.defaults.withCredentials=true;
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post(`${import.meta.env.VITE_API_URL}/forgot-password`,{email})
+        axios.post(`http://localhost:3011/forgot-password`,{email})
         .then(res=>{
             if(res.data.Status ==="Success"){
                 navigate('/login')
@@ -22,7 +22,7 @@ function ForgotPassword() {
 
   return (
     <div className='d-flex justify-content-center align-items-center bg-decondary vh-100'>
-        <div className='bg-white p-3 rounded w-25'>
+        <div className='bg-white p-3 rounded resWidth'>
             <h4>Forgot Password</h4>
             <form onSubmit={handleSubmit}>
                 <div className='mb-3'>

@@ -11,7 +11,7 @@ function Login() {
     axios.defaults.withCredentials=true;
     const handleSubmit=(e)=>{
         e.preventDefault()  
-        axios.post(`${import.meta.env.VITE_API_URL}/login`,{email,password})
+        axios.post(`http://localhost:3011/login`,{email,password})
         .then(result=>{console.log(result)
             if(result.data ==="Success"){
                 navigate('/home')
@@ -24,7 +24,7 @@ function Login() {
 
   return (
     <div className='d-flex justify-content-center align-items-center bg-decondary vh-100'>
-        <div className='bg-white p-3 rounded w-25'>
+        <div className='bg-white p-3 rounded resWidth'>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className='mb-3'>
